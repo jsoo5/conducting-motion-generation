@@ -1,0 +1,39 @@
+# See config.py for details about these parameters.
+
+data_dir:     "E:/DeepMotion/dataset/processed/"
+#data_dir:     "./data/processed/"
+summary_dir:    "./results/summaries/"
+chkpt_dir:  "./results/checkpoints"
+results_file: "./results/results.txt"
+
+seed: 123456
+
+delta_for_early_stopping: 0.5
+
+
+# ---- Network architecture ----
+frame_size: 294
+#frame_size: 300
+num_hidden_layers: 3
+middle_layer: 1
+#middle_layer: 2
+
+layer1_width: 128
+layer2_width: 32
+layer3_width: 128
+
+# ---- Training parameters ----
+chunk_length: 1
+dropout_keep_prob: 0.9
+noise_variance: 0.02
+training_epochs: 80
+pretraining_epochs: 5
+batch_size: 128
+lr: 0.0001
+pretraining_lr: 0.001
+
+
+# Weight decay is disabled by default.               
+# You can enable it by setting its multiplier below: 
+
+# weight_decay: <some value>
